@@ -1,26 +1,26 @@
 #!/bin/bash
 # ============================================================================
 # Script      : create_directory.sh
-# Description : Crée un répertoire nommé "test_directory" s'il n'existe pas
+# Description : Crée un repertoire nomme "test_directory" s'il n'existe pas
 # Usage       : ./create_directory.sh
 # Auteur      : Ridouane
 # ============================================================================
 
-# Nom du répertoire à créer
+# Nom du repertoire à creer
 directory_name="test_directory"
 
-# Vérifie si le répertoire existe déjà
+# Vérifie si le repertoire existe deja
 if [ -d "$directory_name" ]; then
-    echo "Le répertoire '$directory_name' existe déjà."
+    echo "Le repertoire '$directory_name' existe deja."
 else
-    # Création du répertoire
+    # Création du repertoire
     mkdir "$directory_name"
     
-    # Vérifie si la création a réussi
+    # Vérifie si la creation a réussi
     if [ $? -eq 0 ]; then
-        echo " Le répertoire '$directory_name' a été créé avec succès."
+        echo " Le repertoire '$directory_name' a ete cree  avec succes."
     else
-        echo " Erreur : Impossible de créer le répertoire '$directory_name'."
+        echo " Erreur : Impossible de creer le repertoire '$directory_name'."
         exit 1
     fi
 fi
