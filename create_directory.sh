@@ -1,13 +1,15 @@
 #!/bin/bash
+# Demande un nom de répertoire à l'utilisateur
 
-# Ce script crée un répertoire nommé 'test_directory' s'il n'existe pas déjà
+read -p "Entrez le nom du répertoire à créer : " DIR
 
-DIR="test_directory"
+if [ -z "$DIR" ]; then
+  echo "Erreur : le nom du répertoire est vide."
+  exit 1
+fi
 
 if [ -d "$DIR" ]; then
   echo "Le répertoire '$DIR' existe déjà."
 else
-  mkdir "$DIR"
-  echo "Répertoire '$DIR' créé."
+  mkdir "$DIR" && echo "Le répertoire '$DIR' a été créé." || echo "Erreur lors de la création."
 fi
-
