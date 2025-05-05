@@ -11,7 +11,7 @@ read -p "Entrez le nom du fichier : " FILENAME
 
 # Vérifie si l'entrée est vide
 if [ -z "$FILENAME" ]; then
-  echo "❌ Erreur : nom du fichier vide."
+  echo " Erreur : nom du fichier vide."
   exit 1
 fi
 
